@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica XYZ - Contatos</title>
+    <meta name=" description" content="Clínica com Atendimento em Várias Especialidades Médicas na Cidade de Limeira">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Esta seção é o cabeçalho (apertar control e ;) -->
+    <header>
+        <img src="Imagens/logo.png" alt="Logo da Clínica XYZ">
+    </header>
+
+    <main>
+        <section class="destaque">
+            <h1>Contatos</h1>
+            <p>Formulário de contato e nossa localização</p>
+
+
+        </section>
+
+        <section class="contatos">
+
+           <div>
+               <form action="" method="post" name="form1" id="form1">
+                <div>
+                    <label for="">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div>
+                    <label for="">E-mail:</label>
+                    <input type="email" id="correio eletrônico" name="correio eletrônico" required>
+                </div>
+                <div>
+                    <label for="">Sexo:</label>
+                    <input type="radio" id="masculino" name="sexo" value="masc"> Masculino
+                    <input type="radio" id="feminino" name="sexo" value="fem"> Feminino
+                </div>
+                <div>
+                    <label for="">Assunto</label>
+                    <select name="assunto" id="assunto">
+                        <option></option>    
+                        <option>Crítica</option>
+                        <option>Dúvida</option>
+                        <option>Sugestão</option>
+                        <option selected>Elogio</option>
+                        <option>Informação</option>
+                        <option>Outro</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="">Comentário</label>
+                    <textarea name="comentario" id="comentario" rows="6"></textarea>
+                </div>
+                <div>
+                    <input type="checkbox" name="lgpd" id="lgpd" value="sim">
+                    Autorizo o uso dos dados de acordo com a <a href="#">política de privacidade</a>
+                </div>
+                <div>
+                    <input type="submit" name="enviar" id="envia" value="Enviar Dados">
+                </div>
+
+               </form>
+
+            </div>
+            <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.317702257775!2d-47.40150102378774!3d-22.567217925825307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c880ee0caac24d%3A0x95fcf7d5914d4d50!2sSenac%20Limeira!5e0!3m2!1spt-BR!2sbr!4v1749084922055!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+
+        </section>
+
+        <section class="voltar">
+            <a href="index.html"> <i class="bi bi-arrow-left-circle-fill"></i> Voltar</a>
+        </section>
+
+
+
+    </main>
+    <footer>
+        &copy; 2025 | Clínica XYZ | Créditos
+    </footer>
+</body>
+
+</html>

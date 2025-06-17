@@ -1,0 +1,76 @@
+HTML + CSS
+- Editor de código: VSCode 
+  Obs.: não esquecer de instalar a extensão live server, para poder rodar no navegador 
+- Navegador: all
+
+- domínio (endereço) - registro.br para comprar o dominio
+- hospedagem
+
+- inglês
+- lógica de programação
+
+github.com (repositórios)
+
+x
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22
+=========================================================
+
+<meta charset="UTF-8">
+
+meta é a tag
+charset é atributo (especificação ou complemento da tag)
+
+==========================================================
+
+PascalCase  TesteDeMesa
+camelCase   testeDeMesa
+snake_case  teste_de_mesa
+kebab-case  teste-de-mesa
+
+===========================================================
+
+site colors para paleta de cores com codigo hexadecimal
+site getbootstrap para icones gratuitos
+site gradients para gradiente de cores
+site google fonts para fontes de letras
+git downloads para instalar git local
+
+==========================================================
+
+site origamid.com para o recurso de flexbox
+site httpstatus.com para referencia de codigos de status
+site w3schools.com para estudar html e css
+site pixabay.com para baixar fotos
+
+==========================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
