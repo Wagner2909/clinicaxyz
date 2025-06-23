@@ -33,7 +33,7 @@ git push -u origin main
 ATUALIZAÇÕES:
 
 git add .
-git commit -m "Aula 14/05/2025: Inclusão dos links na home e formatação no CSS"
+git commit -m "Aula 16/06/2025: Publicação"
 git push
 
 
@@ -47,4 +47,9 @@ Seguir os passos descritos em Atualizações.
 
 
 
-
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Wagner2909/clinicaxyz.git
+git push -u origin main

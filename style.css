@@ -2,504 +2,593 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /* é um seletor de formatação universal e aplica-se a todas as tags */
-*{
-    margin: 0;                    /* margem externa */
-    padding: 0;                   /* margem interna */
-    box-sizing: border-box;       /* altera a forma como o css  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* Regra */
-body{
-    /* Propriedade: valor */
-    font-family: "Poppins", sans-serif;
-}
-
-header{
-    background-color: #0e365f;  /* Cor de fundo */
-    text-align: center;           /* Centraliza um texto */
-    margin: 0px 0px 0px 0px;      /* Top Right Bottom Left sentido horario */
-    padding: 20px 0px 20px 0px;   /* Top Right Bottom Left sentido horario */
-
-}
-footer{
-    background-color: #f1f1f1;
-    padding: 30px;
-    text-align: center;
-    color: #777;                
-}
-
-
-
-/* Formatação generica para os links */
-a{
-    text-decoration: none;        /* Retira o sublinhado dos links */
-    color: #492291;             /* Altera a cor do link */ 
-}
-a:hover{
-    text-decoration: underline;    /* Volta o sublinhado quando passar o mouse em cima */
-}
-
-/* Formatação da Home */
-
-main{
-    width: 1200px;                /* Fixa a largura */
-    margin: 0 auto 0 auto;        /* Centraliza o container (elemento de bloco) */
-    padding: 40px 0px 40px 0px;
-}
-section{
-    margin-bottom: 40px;
-}
-
-h2{
-    text-align: center;
-    margin-top: 50px;
-}
-
-/* O ponto (.) indica que destaque é uma classe e não uma tag */
-.destaque{
-    text-align: center;
-    p{                           /* CSS nesting (alinhamento de CSS) */                          
-        color: 444;              /* Cor da letra */
-        font-size: 1.2rem;       /* Tamanho da letra */
-        line-height: 150%;       /* Altura da linha ou espaçamento entre linhas */
-    }
-    h1{
-        font-size: 2rem;
-        margin-bottom: 10px;
-        font-weight: 600;        /* Carga com valores de 100 a 900, se a fonte permitir, seria o negrito */
-        font-style: italic;      /* Fonte estilo italico */
-    }
-}
-
-.grid-home{
-    display: flex;                /* Flexbox */
-    flex-wrap: wrap;              /* Permitir a quebra de linha dos elementos */
-    gap: 25px;                    /* Espacamento entre os elementos */
-    *{
-        flex-basis: 20%;          /* Tamanho inicial para o elemento filho */
-        flex-grow: 1;             /* Permitir aumentar o tamanho */
-        flex-shrink: 1;           /* Permitir reduzir o tamanho */
-    }
-    a{
-        text-decoration: none;     /* Tirar o sublinhado */
-        color: #000;
-    }
-    
-}
-
-.card{
-    /* Aplicar sombra */
-    /* 0= deslocamento horizontal, 3px= vertical, 10px= desfoque, rgba= cor */
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    padding-bottom: 15px;         /* Margem interna inferior */
-    border-radius: 10px;          /* Cantos arredondados */
-    text-align: center;
-    img{
-        width: 100%;              /* Fixa a largura proporcional */
-        object-fit: cover;        /* Imagem se ajusta ao container com proporção original */
-        height: 160px;            /* Altura original de imagem */ 
-    }
-    h3{
-        color: #6a3bc8;
-        margin: 15px 0 8px 0;
-    }
-    p{
-        font-size: 0.95rem;
-        padding: 0px 10px;
-    }
-}
-/* Formata o comportamento do card */
-.card:hover{
-    transform: translateY(-5px);    /* Modifica a aparência visual do elemento */
-}
-
-.redes-sociais{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-top: 10px;
-    a{
-        background-color: #aaa;
-        padding: 10px 15px;          /* 10px top e bottom, 15px left ne right */
-        text-decoration: none;       /* Tirar o sublinhado do link */
-        color: #fff;
-        border-radius: 8px;          /* Arredondar os cantos */
-    }
-    a:hover{
-        transform: translateY(-2px);
+    body {                                  /* Propriedade: valor */
+        font-family: "Poppins", sans-serif;
     }
 
-    /* O nth-child seleciona elementos filhos de uma tag usada no grupo */
-    a:nth-child(1){
-        background-color: #3b5998; /* Cor para o facebook */
-    }
-    a:nth-child(2){
-        background-color: #ff0000; /* Cor para o youtube */
-    }
-    a:nth-child(3){
-        background: linear-gradient(45deg, #405de6, #5851bb, #833ab4, #c13584, #e1306c, #fd1d1d);   /* Cor para o instagram */
-    }
-    a:nth-child(4){
-        background-color: #25d366; /* Cor para o whatsapp */
-    }
-    a:nth-child(5){
-        background-color: #000;    /* Cor para o tiktok */
-    }
-}
-
-/* Link voltar ao rodapé das páginas */
-.voltar{
-    text-align: center;
-    margin-top: 20px;
-}
-
- /* Formatação do grid de clínica */
-.grid-clinica{
-    display: flex;                     /* Opção por layout em grid (grade). o Padrão para o display é block */
-    justify-content: space-between;    /* Alinha pelas margens externas (direita e esquerda) */
-    gap:1.5rem;
-    align-items: flex-start;
-    div{
-        flex-grow: 1;                   /* Permite expandir a largura */
-        flex-shrink: 1;                 /* Permite reduzir a largura */
-        flex-basis: 300px;              /* tamanho inicial */
-    }
-    img{
-        width: 100%;                     /* imagem responsiva */
-    }
-    h2{
-        text-align: start;               /* alinha a esquerda */
-        margin-bottom: 15px;
-        margin-top: 0;
-    }
-    p{
-        line-height: 150%;                /* altura da linha ou espaçamento entre linhas */
-        margin-bottom: 15px;              /* margem inferior */ 
-    }
-    ul,ol{
-        padding-left: 20px;               /* alinha o texto/marcação para esquerda */
-        list-style: square;               /* altera a formatação da marcação */
-        li{
-            line-height: 150%;            /* espaçamento entre as linhas do texto */
-        }
-                   
-    }
-}
-
-/* Formatação do grid de especialidades */
-.grid-especialidades{
-    display: flex;                /* Flexbox */
-    flex-wrap: wrap;              /* Permitir a quebra de linha dos elementos */
-    gap: 25px;                    /* Espacamento entre os elementos */
-    *{
-        flex-basis: 30%;          /* Tamanho inicial para o elemento filho */
-        flex-grow: 1;             /* Permitir aumentar o tamanho */
-        flex-shrink: 1;           /* Permitir reduzir o tamanho */
-    }
-    a{
-        text-decoration: none;     /* Tirar o sublinhado */
-        color: #000;
-    }
-    
-}
-
-/* Formatação do grid de convenios */
-.grid-convenios{
-    display: flex;                /* Flexbox */
-    flex-wrap: wrap;              /* Permitir a quebra de linha dos elementos */
-    gap: 25px;                    /* Espacamento entre os elementos */
-    text-align: center;
-    *{
-        flex-basis: 15%;          /* Tamanho inicial para o elemento filho */
-        flex-grow: 1;             /* Permitir aumentar o tamanho */
-        flex-shrink: 1;           /* Permitir reduzir o tamanho */
-    }
-    i{
-        font-size:60px;           /* define o tamanho do icone */
+    header {
+        background-color: #0e365f;         /* Cor de fundo */
+        text-align: center;                  /* Centraliza um texto */
+        margin: 0px 0px 0px 0px;             /* Top Right Bottom Left sentido horario */
+        padding: 20px 0px 20px 0px;          /* Top Right Bottom Left sentido horario */
     }
 
-    a{
-        text-decoration: none;     /* Tirar o sublinhado */
-        color: #000;
+    footer {
+        background-color: #f1f1f1;
+        padding: 30px;
+        text-align: center;
+        color: #777;
     }
-    
-}
 
-/* Formatação das tabelas todas */
-table{
-    width: 100%;
-    border-collapse: collapse;      /* junta as bordas em uma só */     
-}
-th{
-   text-align: start;               /* alinhamento a esquerda */
-      
-}
 
-/* Formatação tabelas especificas */
-/* Formatação Tabela 1 */
-.tabela1 th{
- background-color: #aaa;
- border: 2px solid #aaa;
- padding: 8px;
-}
-.tabela1 td{
-    border: 2px solid #ccc;
-    padding: 8px;
-}
-.tabela1 th:nth-child(3),
-.tabela1 td:nth-child(3){
-    text-align: end;
-    font-weight: 500;
-}
-.tabela1 th:nth-child(4),
-.tabela1 td:nth-child(4){
-    text-align: center;
-    font-weight: 500;
-}
-.tabela1 tr:nth-child(even){        /* (even) é o mesmo que par e (odd) é o mesmo que impar */
-    color: green;
-}
 
-/* Formatação Tabela 2 */
-.tabela2 th{
-    border-bottom: 2px solid #aaa;
-    padding: 4px;
-}
-.tabela2 td{
-    border-bottom: 2px solid #ccc;
-    padding: 4px;
-}
-.tabela2 th:nth-child(3),
-.tabela2 td:nth-child(3){
-    text-align: end;
-    font-weight: 500;
-}
-.tabela2 th:nth-child(4),
-.tabela2 td:nth-child(4){
-    text-align: center;
-    font-weight: 500;
-}
-   
-/* Formatação Tabela 3 */
-.tabela3 th{
-    background-color: #aaa;
-    border: 2px solid #aaa;
-    padding: 2px;
-}
-.tabela3 td{
-    border: 2x solid #ccc;
-    padding: 2px;
-}
-.tabela3 th:nth-child(3),
-.tabela3 td:nth-child(3){
-    text-align: end;
-    font-weight: 500;
-}
-.tabela3 th:nth-child(4),
-.tabela3 td:nth-child(4){
-    text-align: center;
-    font-weight: 500;
-}
-.tabela3 tr:nth-child(even){        /* (even) é o mesmo que par e (odd) é o mesmo que impar */
-    background-color: #aaa; 
-    border: 2px solid #aaa;
-}
+    /* Formatação generica para os links */
+    a {
+        text-decoration: none;              /* Retira o sublinhado dos links */
+        color: #492291;                   /* Altera a cor do link */
+    }
 
-/* Formatação da Galeria de Fotos */
-.galeria-destaque{
-    display: flex;                  /* necessario pois img é uma tag inline */
-    justify-content: center;        /* centaliza a imagem */ 
-    background-color: #333;
-    margin: 30px 0px 20px 0px;      /* top right bottom letf */
-    img{
-        width: 60%;
+    a:hover {
+        text-decoration: underline;         /* Volta o sublinhado quando passar o mouse em cima */
     }
-}
-.galeria-miniaturas{
-    display: flex;
-    justify-content: space-between;
-    img{
-        width: 110px;
-    }
-}
 
-/* Formatação dos Videos e Audios */
-.videos{
-    text-align: center;
-    video{
-        width: 70%;
-    }
-    iframe{
-        width: 70%;
-        height:60vh ;               /* a medida da altura pode ser em pixel ou em vh, pixel é fixo */
-    }
-}
+    /* Formatação da Home */
 
-/* Formatação dos Contatos */
-.contatos{
-    display: flex;
-    justify-content: space-between;
-    div{                             /* formatação para todas as divs de contatos */
-        flex-basis: 45%;
-        flex-grow: 1;
-        flex-shrink: 1;
+    main {
+        width: 1200px;                     /* Fixa a largura */
+        margin: 0 auto 0 auto;             /* Centraliza o container (elemento de bloco) */
+        padding: 40px 0px 40px 0px;
     }
-    div:last-child{                  /* formatação da ultima div (do mapa) */
-        iframe{
-            width: 100%;
-            height: 65vh;
-        }
+
+    section {
+        margin-bottom: 40px;
     }
-    label{
-        display: block;
-        text-transform: uppercase;    /* formatação da letra (caixa-alta), maiuscula, minuscula, etc */
-        font-weight: bold;
-        font-size: .9rem;
-        margin-top: 20px;
-        color: #555;    
-    }
-    input[type=text], input[type=email], textarea{
-        padding: 10px;
-        width: 90%;
-        border: 1px solid #bbb;
-        border-radius: 5px;
-    }
-    select{
-        padding: 8px;
-        border: 1px solid #bbb;
-        border-radius: 5px;
-    }
-    input[type=checkbox]{
-        margin-top: 25px;
-        margin-bottom: 25px;
-    }
-    input[type=submit]{
-        border-style: none;
-        background-color: #3b5998;
-        color: #fff;
-        padding: 10px 30px;
-        border-radius: 5px;
-        cursor: pointer;                /* muda o cursor para a mãozinha */
-    }
-    input[type=submit]:hover{           /* :hover, utilizado quando passar o mouse no cursor do botão, muda de cor */
-        background-color: #000;
-    }
-}
-/* Formatação do Agendamento */
-.agendamento{
-    margin: 0px auto;                   /* centraliza o container */
-    width: 50%;
-    text-align: center;                 /* centraliza o conteudo */
-    label{
-        display: block;                 /* transformar em bloco para ficar separado do campo */
-        text-transform: uppercase;
-        margin-top: 20px;
-        font-weight: bold;
-        font-size:.9rem ;
-        color: #555;
-    }
-    .form-group{
-        display: flex;                   /* disposição lado a lado */
-        justify-content: space-between;
-    }
-    input[type=date],
-    input[type=time],
-    input[type=text],
-    select{
-        padding: 8px;
-        border: 1px solid #bbb;
-        border-radius: 5px;
-    }
-    input[type=time]{
-        padding: 7px;
-    }
-    input[type=text]{
-        width: 80%;
-    }
-    input[type=submit]{
-        border-style: none;             /* retirar a borda */
-        background-color: #3b5998;
-        color: #fff;
-        padding: 10px 30px;
-        border-radius: 5px;
-        cursor: pointer;                /* muda o cursor para a mãozinha */
-    }
-    input[type=submit]:hover{           /* :hover, utilizado quando passar o mouse no cursor do botão, muda de cor */
-        background-color: #000;
-    }
-    div{
-        margin-top: 30px;
-    }
-}
-/* Formatação para layout responsivo */
-@media screen and (max-width: 800px){    /* midia queries */
-    header{
-        background-color: green;
-  }
-}
-  main{
-    width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-   .grid-home{
-      *{
-        flex-basis: 100%;
-  }
-}
-   .grid-clinica,
-   .grid-especialidades,
-   .grid-convenios,
-   .form-group,
-   .contatos{
-        flex-direction: column;         /* mudar a direção do empilhamento das tags */
-        align-items: center;
-}
-.grid-clinica{
-    .card{
-        width: 100%;
-    }
-    div{
-        flex-basis: 100%;
-    }
-}
-.galeria-destaque{
-    img{
-        width: 100%;
-    }
-}
-.galeria-miniaturas{
-    flex-wrap: wrap;                     /* quebrar a linha */
-    img{
-        width: 20%;
-    }
-}
-.videos{
-    iframe{
-        width: 100%;
-        height: 35vh;
-    }
-    video{
-        width: 100%;
-    }
-}
-.agendamento{
-        width: 100%;
-}
-.contatos{
-    div:last-child{
+
+    h2 {
+        text-align: center;
         margin-top: 50px;
     }
-}
 
-@media screen and (max-width: 600px){
-    header{
-        background-color: red;
-  }
-}
-@media screen and (max-width: 400px){
-    header{
-        background-color: yellow;
-  }
-}
+    /* O ponto (.) indica que destaque é uma classe e não uma tag */
+    .destaque {
+        text-align: center;
+
+        p {                               /* CSS nesting (alinhamento de CSS) */
+            color: 444;                   /* Cor da letra */
+            font-size: 1.2rem;            /* Tamanho da letra */
+            line-height: 150%;            /* Altura da linha ou espaçamento entre linhas */
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            font-weight: 600;              /* Carga com valores de 100 a 900, se a fonte permitir, seria o negrito */
+            font-style: italic;            /* Fonte estilo italico */
+        }
+    }
+
+    .grid-home {
+        display: flex;                      /* Flexbox */
+        flex-wrap: wrap;                    /* Permitir a quebra de linha dos elementos */
+        gap: 25px;
+
+        /* Espacamento entre os elementos */
+        * {
+            flex-basis: 20%;                /* Tamanho inicial para o elemento filho */
+            flex-grow: 1;                   /* Permitir aumentar o tamanho */
+            flex-shrink: 1;                 /* Permitir reduzir o tamanho */
+        }
+
+        a {
+            text-decoration: none;           /* Tirar o sublinhado */
+            color: #000;
+        }
+
+    }
+
+    .card {
+        /* Aplicar sombra */
+        /* 0= deslocamento horizontal, 3px= vertical, 10px= desfoque, rgba= cor */
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        padding-bottom: 15px;               /* Margem interna inferior */
+        border-radius: 10px;                /* Cantos arredondados */
+        text-align: center;
+
+        img {
+            width: 100%;                   /* Fixa a largura proporcional */
+            object-fit: cover;             /* Imagem se ajusta ao container com proporção original */
+            height: 160px;                 /* Altura original de imagem */
+        }
+
+        h3 {
+            color: #6a3bc8;
+            margin: 15px 0 8px 0;
+        }
+
+        p {
+            font-size: 0.95rem;
+            padding: 0px 10px;
+        }
+    }
+
+    /* Formata o comportamento do card */
+    .card:hover {
+        transform: translateY(-5px);        /* Modifica a aparência visual do elemento */
+    }
+
+    .redes-sociais {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 10px;
+
+        a {
+            background-color: #aaa;
+            padding: 10px 15px;            /* 10px top e bottom, 15px left ne right */
+            text-decoration: none;         /* Tirar o sublinhado do link */
+            color: #fff;
+            border-radius: 8px;            /* Arredondar os cantos */
+        }
+
+        a:hover {
+            transform: translateY(-2px);
+        }
+
+        /* O nth-child seleciona elementos filhos de uma tag usada no grupo */
+        a:nth-child(1) {
+            background-color: #3b5998;    /* Cor para o facebook */
+        }
+
+        a:nth-child(2) {
+            background-color: #ff0000;     /* Cor para o youtube */
+        }
+
+        a:nth-child(3) {
+            background: linear-gradient(45deg, #405de6, #5851bb, #833ab4, #c13584, #e1306c, #fd1d1d);    /* Cor para o instagram */
+        }
+
+        a:nth-child(4) {
+            background-color: #25d366;      /* Cor para o whatsapp */
+        }
+
+        a:nth-child(5) {
+            background-color: #000;          /* Cor para o tiktok */
+        }
+    }
+
+    /* Link voltar ao rodapé das páginas */
+    .voltar {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    /* Formatação do grid de clínica */
+    .grid-clinica {
+        display: flex;                        /* Opção por layout em grid (grade). o Padrão para o display é block */
+        justify-content: space-between;       /* Alinha pelas margens externas (direita e esquerda) */
+        gap: 1.5rem;
+        align-items: flex-start;
+
+        div {
+            flex-grow: 1;                     /* Permite expandir a largura */
+            flex-shrink: 1;                   /* Permite reduzir a largura */
+            flex-basis: 300px;                /* tamanho inicial */
+        }
+
+        img {
+            width: 100%;                      /* imagem responsiva */
+        }
+
+        h2 {
+            text-align: start;                /* alinha a esquerda */
+            margin-bottom: 15px;
+            margin-top: 0;
+        }
+
+        p {
+            line-height: 150%;               /* altura da linha ou espaçamento entre linhas */
+            margin-bottom: 15px;             /* margem inferior */
+        }
+
+        ul,
+        ol {
+            padding-left: 20px;              /* alinha o texto/marcação para esquerda */
+            list-style: square;
+
+            /* altera a formatação da marcação */
+            li {
+                line-height: 150%;           /* espaçamento entre as linhas do texto */
+            }
+
+        }
+    }
+
+    /* Formatação do grid de especialidades */
+    .grid-especialidades {
+        display: flex;                       /* Flexbox */
+        flex-wrap: wrap;                     /* Permitir a quebra de linha dos elementos */
+        gap: 25px;
+
+        /* Espacamento entre os elementos */
+        * {
+            flex-basis: 30%;                 /* Tamanho inicial para o elemento filho */
+            flex-grow: 1;                    /* Permitir aumentar o tamanho */
+            flex-shrink: 1;                  /* Permitir reduzir o tamanho */
+        }
+
+        a {
+            text-decoration: none;            /* Tirar o sublinhado */
+            color: #000;
+        }
+
+    }
+
+    /* Formatação do grid de convenios */
+    .grid-convenios {
+        display: flex;                       /* Flexbox */
+        flex-wrap: wrap;                     /* Permitir a quebra de linha dos elementos */
+        gap: 25px;                           /* Espacamento entre os elementos */
+        text-align: center;
+
+        * {
+            flex-basis: 15%;                 /* Tamanho inicial para o elemento filho */
+            flex-grow: 1;                    /* Permitir aumentar o tamanho */
+            flex-shrink: 1;                  /* Permitir reduzir o tamanho */
+        }
+
+        i {
+            font-size: 60px;                 /* define o tamanho do icone */
+        }
+
+        a {
+            text-decoration: none;            /* Tirar o sublinhado */
+            color: #000;
+        }
+
+    }
+
+    /* Formatação das tabelas todas */
+    table {
+        width: 100%;
+        border-collapse: collapse;           /* junta as bordas em uma só */
+    }
+
+    th {
+        text-align: start;                   /* alinhamento a esquerda */
+
+    }
+
+    /* Formatação tabelas especificas */
+    /* Formatação Tabela 1 */
+    .tabela1 th {
+        background-color: #aaa;
+        border: 2px solid #aaa;
+        padding: 8px;
+    }
+
+    .tabela1 td {
+        border: 2px solid #ccc;
+        padding: 8px;
+    }
+
+    .tabela1 th:nth-child(3),
+    .tabela1 td:nth-child(3) {
+        text-align: end;
+        font-weight: 500;
+    }
+
+    .tabela1 th:nth-child(4),
+    .tabela1 td:nth-child(4) {
+        text-align: center;
+        font-weight: 500;
+    }
+
+    .tabela1 tr:nth-child(even) {
+        /* (even) é o mesmo que par e (odd) é o mesmo que impar */
+        color: green;
+    }
+
+    /* Formatação Tabela 2 */
+    .tabela2 th {
+        border-bottom: 2px solid #aaa;
+        padding: 4px;
+    }
+
+    .tabela2 td {
+        border-bottom: 2px solid #ccc;
+        padding: 4px;
+    }
+
+    .tabela2 th:nth-child(3),
+    .tabela2 td:nth-child(3) {
+        text-align: end;
+        font-weight: 500;
+    }
+
+    .tabela2 th:nth-child(4),
+    .tabela2 td:nth-child(4) {
+        text-align: center;
+        font-weight: 500;
+    }
+
+    /* Formatação Tabela 3 */
+    .tabela3 th {
+        background-color: #aaa;
+        border: 2px solid #aaa;
+        padding: 2px;
+    }
+
+    .tabela3 td {
+        border: 2x solid #ccc;
+        padding: 2px;
+    }
+
+    .tabela3 th:nth-child(3),
+    .tabela3 td:nth-child(3) {
+        text-align: end;
+        font-weight: 500;
+    }
+
+    .tabela3 th:nth-child(4),
+    .tabela3 td:nth-child(4) {
+        text-align: center;
+        font-weight: 500;
+    }
+
+    .tabela3 tr:nth-child(even) {
+        /* (even) é o mesmo que par e (odd) é o mesmo que impar */
+        background-color: #aaa;
+        border: 2px solid #aaa;
+    }
+
+    /* Formatação da Galeria de Fotos */
+    .galeria-destaque {
+        display: flex;                    /* necessario pois img é uma tag inline */
+        justify-content: center;          /* centaliza a imagem */
+        background-color: #333;
+        margin: 30px 0px 20px 0px;
+
+        /* top right bottom letf */
+        img {
+            width: 60%;
+        }
+    }
+
+    .galeria-miniaturas {
+        display: flex;
+        justify-content: space-between;
+
+        img {
+            width: 110px;
+        }
+    }
+
+    /* Formatação dos Videos e Audios */
+    .videos {
+        text-align: center;
+
+        video {
+            width: 70%;
+        }
+
+        iframe {
+            width: 70%;
+            height: 60vh;              /* a medida da altura pode ser em pixel ou em vh, pixel é fixo */
+        }
+    }
+
+    /* Formatação dos Contatos */
+    .contatos {
+        display: flex;
+        justify-content: space-between;
+
+        div {                          /* formatação para todas as divs de contatos */
+            flex-basis: 45%;
+            flex-grow: 1;
+            flex-shrink: 1;
+        }
+
+        div:last-child {
+
+            /* formatação da ultima div (do mapa) */
+            iframe {
+                width: 100%;
+                height: 65vh;
+            }
+        }
+
+        label {
+            display: block;
+            text-transform: uppercase;            /* formatação da letra (caixa-alta), maiuscula, minuscula, etc */
+            font-weight: bold;
+            font-size: .9rem;
+            margin-top: 20px;
+            color: #555;
+        }
+
+        input[type=text],
+        input[type=email],
+        textarea {
+            padding: 10px;
+            width: 90%;
+            border: 1px solid #bbb;
+            border-radius: 5px;
+        }
+
+        select {
+            padding: 8px;
+            border: 1px solid #bbb;
+            border-radius: 5px;
+        }
+
+        input[type=checkbox] {
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+
+        input[type=submit] {
+            border-style: none;
+            background-color: #3b5998;
+            color: #fff;
+            padding: 10px 30px;
+            border-radius: 5px;
+            cursor: pointer;                  /* muda o cursor para a mãozinha */
+        }
+
+        input[type=submit]:hover {            /* :hover, utilizado quando passar o mouse no cursor do botão, muda de cor */
+            background-color: #000;
+        }
+    }
+
+    /* Formatação do Agendamento */
+    .agendamento {
+        margin: 0px auto;                     /* centraliza o container */
+        width: 50%;
+        text-align: center;
+
+        /* centraliza o conteudo */
+        label {
+            display: block;                   /* transformar em bloco para ficar separado do campo */
+            text-transform: uppercase;
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: .9rem;
+            color: #555;
+        }
+
+        .form-group {
+            display: flex;                    /* disposição lado a lado */
+            justify-content: space-between;
+        }
+
+        input[type=date],
+        input[type=time],
+        input[type=text],
+        select {
+            padding: 8px;
+            border: 1px solid #bbb;
+            border-radius: 5px;
+        }
+
+        input[type=time] {
+            padding: 7px;
+        }
+
+        input[type=text] {
+            width: 80%;
+        }
+
+        input[type=submit] {
+            border-style: none;
+            /* retirar a borda */
+            background-color: #3b5998;
+            color: #fff;
+            padding: 10px 30px;
+            border-radius: 5px;
+            cursor: pointer;                  /* muda o cursor para a mãozinha */
+        }
+
+        input[type=submit]:hover {            /* :hover, utilizado quando passar o mouse no cursor do botão, muda de cor */
+            background-color: #000;
+        }
+
+        div {
+            margin-top: 30px;
+        }
+    }
+
+    /* Formatação para layout responsivo */
+    @media screen and (max-width: 800px) {
+
+        /* midia queries */
+        header {
+            background-color: green;
+        }
+
+        main {
+            width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .grid-home {
+            * {
+                flex-basis: 100%;
+            }
+        }
+
+        .grid-clinica,
+        .grid-especialidades,
+        .grid-convenios,
+        .form-group,
+        .contatos {
+            flex-direction: column;            /* mudar a direção do empilhamento das tags */
+            align-items: center;
+        }
+
+        .grid-clinica {
+            .card {
+                width: 100%;
+            }
+
+            div {
+                flex-basis: 100%;
+            }
+        }
+
+        .galeria-destaque {
+            img {
+                width: 100%;
+            }
+        }
+
+        .galeria-miniaturas {
+            flex-wrap: wrap;
+
+            /* quebrar a linha */
+            img {
+                width: 20%;
+            }
+        }
+
+        .videos {
+            iframe {
+                width: 100%;
+                height: 35vh;
+            }
+
+            video {
+                width: 100%;
+            }
+        }
+
+        .agendamento {
+            width: 100%;
+        }
+
+        .contatos {
+            div:last-child {
+                margin-top: 50px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        header {
+            background-color: red;
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        header {
+            background-color: yellow;
+        }
+    }
